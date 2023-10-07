@@ -29,12 +29,14 @@ const server = http.createServer((req, res) => {
       try {
         handleUsers(req, res);
       } catch (err) {
+        console.log(err.message);
         handleError(req, res);
       }
     } else {
       try {
         handleNotFound(req, res);
       } catch (err) {
+        console.log(err.message);
         handleError(req, res);
       }
     }
